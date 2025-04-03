@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GraphQL.Types; // Make sure to include the GraphQL library for types
+﻿ using GraphQL.Types; // Make sure to include the GraphQL library for types
 
 namespace OtterCMSDotNet.Schemas
 {
     public class Post
     {
-        public string? ID { get; set; } // Unique identifier for the post
+        public int ID { get; set; } // Unique identifier for the post
         public string? Title { get; set; } // Title of the post
         public string? Content { get; set; } // Content of the post
         public User? Author { get; set; } // The author of the post, assuming User is another class defined in your system
@@ -42,7 +37,7 @@ namespace OtterCMSDotNet.Schemas
             Field<PostType>("Post")
                 .Resolve(context => new Post
                 {
-                    ID = "1", // Example ID, in a real-world application this would be fetched from a database
+                    ID = 1, // Example ID, in a real-world application this would be fetched from a database
                     Title = "Welcome to OtterCMS", // Example title
                     Content = "This is a sample post content for OtterCMS.", // Example content
                     Author = new User(), // Example author, in a real-world application this would be fetched from a database

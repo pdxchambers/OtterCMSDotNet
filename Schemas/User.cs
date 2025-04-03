@@ -58,4 +58,5 @@ namespace OtterCMSDotNet.Schemas
                     Role = User.UserRole.Admin // Example role, in a real-world application this would be determined by your user management logic
                 });
         }
+    }
 }
